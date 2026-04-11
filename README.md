@@ -1,53 +1,25 @@
-Experiment No. 13: Data Visualization using Pandas
+# Data Wrangling and Missing Values Preprocessing
 
-Aim:
+## Project Overview
+This project focuses on data wrangling techniques using Python. The primary goal is to perform data preprocessing on a dataset, specifically identifying and handling missing values (NaN) to ensure data quality for analysis.
 
-To perform data visualization using built-in plotting functions of the Pandas library.
+## Key Operations Performed
+* **Detection of Missing Values**: Utilizing `isna()` and `notna()` functions to create boolean masks for data gaps.
+* **Statistical Analysis of Nulls**: Calculating missing value counts both column-wise (`axis=0`) and row-wise (`axis=1`).
+* **Data Cleaning Techniques**:
+  * **Dropping Data**: Removing rows containing any null values using `dropna()`.
+  * **Imputation**: Filling missing gaps with specific constants using the `fillna()` method.
 
-Objectives:
+## Technical Procedure
+1.  **Environment Setup**: Import `pandas` and `numpy` libraries.
+2.  **Dataset Construction**: Creation of a sample DataFrame with intentional `np.nan` values for testing.
+3.  **Exploratory Data Analysis**:
+    * Visualize the null structure using boolean mapping.
+    * Summarize total missing counts per category to understand data loss.
+4.  **Handling Missing Values**: Apply cleaning methods (Drop or Fill) depending on the analysis requirements.
 
-1.To understand data visualization using Pandas.
-
-2.To create different types of plots directly from DataFrames.
-
-3.To analyze data visually using simple plotting techniques.
-
-4.To integrate Pandas with Matplotlib for visualization.
-
-Theory:
-
-Pandas provides built-in plotting functionality that is based on the Matplotlib library. It allows quick and easy visualization of data directly from DataFrames.
-
-Using Pandas plotting functions, we can generate different types of graphs without writing complex code. These plots help in understanding trends, comparisons, and distributions in data.
-
-Common plots in Pandas include:
-
-1.Line Plot – shows trends over time
-
-2.Bar Plot – compares categories
-
-3.Histogram – shows frequency distribution
-
-4.Box Plot – shows spread and outliers
-
-Pandas internally uses Matplotlib, making visualization simple and efficient.
-
-Procedure:
-
-1.Import required libraries (pandas, matplotlib.pyplot).
-
-2.Create or load a dataset.
-
-3.Use Pandas plotting functions:
-
-3.1 Line plot using plot()
-
-3.2 Bar plot using plot(kind='bar')
-
-3.3 Histogram using plot(kind='hist')
-
-3.4 Box plot using plot(kind='box')
-
-4..Add titles and labels using Matplotlib functions.
-
-5.Display plots using show().
+## Conclusion
+Through this experiment, I successfully implemented preprocessing workflows. Key takeaways include:
+- **isna()** is essential for initial data auditing.
+- **dropna()** is useful for cleaning small datasets but must be used carefully to avoid losing valuable information.
+- **fillna()** provides a flexible way to maintain dataset size by replacing missing entries with estimated or constant values.
